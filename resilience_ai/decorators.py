@@ -14,10 +14,10 @@ Uses only the standard library -- zero external dependencies (ADR-0008).
 
 from __future__ import annotations
 
-import asyncio
 import functools
 import time
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
 
 from resilience_ai.rate_limiter import ProviderLimits, RateLimiter
 from resilience_ai.resilience import CircuitBreakerPolicy
