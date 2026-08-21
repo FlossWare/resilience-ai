@@ -6,6 +6,11 @@ limiting, and rolling-window health tracking.  Zero external dependencies.
 
 from __future__ import annotations
 
+from resilience_ai.decorators import (
+    with_circuit_breaker,
+    with_rate_limit,
+    with_retry,
+)
 from resilience_ai.protocol import ResiliencePolicy
 from resilience_ai.provider_health import (
     HealthSnapshot,
@@ -24,11 +29,6 @@ from resilience_ai.retry import (
     RetriesExhaustedError,
     RetryPolicy,
     async_retry,
-)
-from resilience_ai.decorators import (
-    with_circuit_breaker,
-    with_rate_limit,
-    with_retry,
 )
 from resilience_ai.types import BudgetStatus, CircuitState
 
